@@ -12,7 +12,7 @@ def load_raw_tasks() -> List[Dict[str , Any]]:
     try:
         with open(JSON_FILE, "r", encoding="utf-8") as file:
             return json.load(file)
-    except(json.JSONDecodeError,PermissionError): # pyright: ignore[reportInvalidTypeForm]
+    except(json.JSONDecodeError,PermissionError):
         return[]
 
 def save_raw_task(tasks_data: List[Dict[str, Any]] ) -> None:
